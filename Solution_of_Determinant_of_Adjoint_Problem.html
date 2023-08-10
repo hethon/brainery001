@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+      integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn"
+      crossorigin="anonymous"
+    />
+
+    <style type="text/css">
+      :root {
+        --bg-color: #222121;
+        --txt-color: #ffffff;
+        --color-purpage : #C672A5;
+      }
+
+      html {
+        /*  scroll-behavior: smooth;
+		  user-select: none;*/
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--txt-color);
+      }
+
+      .katex-container {
+        text-rendering: auto;
+        font: normal 1.3em KaTeX_Main;
+        line-height: 1.2;
+        text-indent: 0;
+      }
+
+      .katex {
+        font-size: 1em;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--color-purpage);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container my-3 katex-container">
+      <!-- Write your text in this container as shown in the below example-->
+      <!-- Example: -->
+      $$ \textcolor{#9255F7}{\bold{Determinant \space of \space Adjoints}} $$
+
+      $ \textcolor{#C672A5}{\bold{Note:}} \\ $ 
+
+      Since the $|A| \not = 0$, $A^{-1}$ exists. By the definition of inverse of matrices, we have
+            
+      $$ \tag{*} A^{-1} = \frac{1}{|A|}adj A $$
+            
+      Where $adj A$ is the $adjoint$ of $A. \\$    
+      $\text{}\\$ 
+      $
+      \textcolor{#F98E56}{\bold{Solution: }} \\ 
+      $
+      Taking the determinant of $(*)$, we get
+            
+      $$
+      \begin{aligned}  
+      |A^{-1}| &= \Big|\frac{1}{|A|}adj A \Big| \\
+      &= \Big(\frac{1}{|A|}\Big)^3 |adj A| \\
+      \end{aligned} 
+      $$
+      $$
+      \begin{aligned}
+      \tag{**} &= \frac{|adj A|}{|A|^{3}}
+      \end{aligned} 
+      $$
+      Rearranging (**), we have
+      $$
+      |adj A| = |A|^{3}|A^{-1}| 
+      $$
+      But we know that 
+      $$
+      |A^{-1}| = \frac{1}{|A|}
+      $$
+      Therefore,
+      $$
+      \begin{aligned}
+      |adj A| &= |A|^{2} \\
+      &= 2^2 \\
+      &= \bold {\underline {4}}
+      \end{aligned}
+      $$  
+      
+    </div>
+
+    <div class="copyright px-2 py-2">Copyright © 2023 Tedor Brainery <a href="https://t.me/TedorBrainery">@TedorBrainery</a></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+      integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+      integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+      crossorigin="anonymous"
+      onload="renderMathInElement(
+	    	document.body,
+	    	{
+		    	delimiters: [
+		    	  { left: '$$', right: '$$', display: true },
+		    	  { left: '$', right: '$', display: false }
+		    	],
+		    	strict: true,
+		    	throwOnError: true,
+		    	output: 'html'
+	        }
+	    );"
+    ></script>
+  </body>
+</html>
